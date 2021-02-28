@@ -10,7 +10,7 @@ public class ProximityDBFactory {
      */
     public <T> ProximityDB<T> create(int bits) {
         final PrecisionTreeFactory<Collection<GeohashEntry<T>>> precisionTreeFactory =
-            new HashSetPrecisionTreeFactory<>();
+            new ArrayListPrecisionTreeFactory<>();
         return new ProximityDbTree<>(
             precisionTreeFactory, new GeoHashFactoryImpl(), bits
         );

@@ -3,7 +3,6 @@ package edu.vanderbilt.cs.live6;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ProximityDbTree<T> implements ProximityDB<T> {
@@ -11,7 +10,6 @@ public class ProximityDbTree<T> implements ProximityDB<T> {
     private final GeoHashFactory geoHashFactory;
     private final PrecisionTree<Collection<GeohashEntry<T>>> geoTree;
 
-    // @ToDo, need to support multiple entries of the same thing
     public ProximityDbTree(
         PrecisionTreeFactory<Collection<GeohashEntry<T>>> precisionTreeFactory,
         GeoHashFactory factory,
