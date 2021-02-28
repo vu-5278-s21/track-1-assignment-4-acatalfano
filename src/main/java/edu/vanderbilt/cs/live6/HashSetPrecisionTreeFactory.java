@@ -1,11 +1,12 @@
 package edu.vanderbilt.cs.live6;
 
+import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;
 
-public class HashSetPrecisionTreeFactory<T> implements PrecisionTreeFactory<Set<T>> {
+public class HashSetPrecisionTreeFactory<T> implements
+    PrecisionTreeFactory<Collection<T>> {
     @Override
-    public PrecisionTree<Set<T>> with(int resolution) {
+    public PrecisionTree<Collection<T>> with(int resolution) {
         return new ArrayPrecisionTree<>(resolution, HashSet::new);
     }
 }

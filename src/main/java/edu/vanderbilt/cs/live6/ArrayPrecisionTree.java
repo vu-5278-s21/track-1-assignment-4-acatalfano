@@ -2,11 +2,12 @@ package edu.vanderbilt.cs.live6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class ArrayPrecisionTree<T> implements PrecisionTree<T> {
+public class ArrayPrecisionTree<T extends Collection<?>> implements PrecisionTree<T> {
     private final int resolution;
     private final List<T> precisionTree;
 
